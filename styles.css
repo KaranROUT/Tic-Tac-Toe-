@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1e1e1e;
+  }
+  
+  /* Game Container */
+  .game-container {
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Status Display */
+  .status-display {
+    margin-bottom: 20px;
+  }
+  
+  #status {
+    font-size: 28px;
+    font-weight: 600;
+    color: #00adb5;
+  }
+  
+  /* Game Board Styling */
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  /* Individual Cell Styling */
+  .cell {
+    background-color: #393e46;
+    border: none;
+    font-size: 64px;
+    font-weight: bold;
+    color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 10px;
+  }
+  
+  .cell:hover {
+    background-color: #00adb5;
+    transform: scale(1.05);
+  }
+  
+  /* Cell when clicked */
+  .cell:active {
+    transform: scale(0.95);
+  }
+  
+  /* Reset Button Styling */
+  .reset-button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00adb5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-button:hover {
+    background-color: #00c8d5;
+  }
+  
+  .reset-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .game-board {
+      grid-template-columns: repeat(3, 90px);
+      grid-template-rows: repeat(3, 90px);
+      gap: 8px;
+    }
+  
+    .cell {
+      font-size: 48px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .game-board {
+      grid-template-columns: repeat(3, 70px);
+      grid-template-rows: repeat(3, 70px);
+      gap: 6px;
+    }
+  
+    .cell {
+      font-size: 36px;
+    }
+  
+    #status {
+      font-size: 24px;
+    }
+  
+    .reset-button {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  
+  
